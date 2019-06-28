@@ -1,24 +1,16 @@
-import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import Layout from './hoc/Layout/Layout';
-import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
-import Checkout from './containers/Checkout/Checkout';
-import Orders from './containers/Orders/Orders';
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import MainPage from './Containers/MainPage/MainPage'
+import Login from './Components/Login/Login';
 
-class App extends Component {
-  render () {
-    return (
-      <div>
-        <Layout>
-          <Switch>
-            <Route path="/checkout" component={Checkout} />
-            <Route path="/orders" component={Orders} />
-            <Route path="/" exact component={BurgerBuilder} />
-          </Switch>
-        </Layout>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <MainPage/>
+      {/* <Login/> */}
+    </div>
+  );
 }
 
 export default App;
